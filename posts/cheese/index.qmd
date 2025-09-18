@@ -1,0 +1,9 @@
+---
+title: "cheese"
+author: "nikki"
+date: "2025-09-18"
+---
+
+I really like cheese. Especially mozzarella sticks.
+
+![](images/clipboard-1634147019.png)
