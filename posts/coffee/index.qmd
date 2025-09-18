@@ -1,0 +1,8 @@
+---
+title: "coffee"
+author: "nikhita"
+date: "2025-09-18"
+categories: [news]
+---
+
+![Coffee is the best](images/clipboard-3506535653.png)
