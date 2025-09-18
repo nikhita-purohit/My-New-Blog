@@ -2,6 +2,9 @@
   {
     "listing": "/index.html",
     "items": [
+      "/posts/classwork2/classwork2.html",
+      "/posts/penguin/penguin.html",
+      "/posts/new-post-testing/index.html",
       "/posts/post-with-code/index.html",
       "/posts/welcome/index.html"
     ]

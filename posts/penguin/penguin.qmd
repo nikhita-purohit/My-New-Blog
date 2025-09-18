@@ -1,0 +1,36 @@
+---
+title: "penguin"
+author: "nikki"
+---
+
+```{r}
+library(tidyverse)
+library(janitor)
+library(tinytable)
+```
+
+```{r}
+messy <- readr::read_delim("../data/Messy_Penguins.csv",delim=";")%>% 
+  janitor::clean_names(case="snake")
+
+```
+
+```{r}
+messy_modified <- messy %>% 
+  dplyr::mutate(across(where(is.character),as.factor)) %>%
+  dplyr::relocate(where(is.factor))
+
+messy_modified
+```
+
+```{r}
+tt(messy_modified)
+```
+```{r}
+messy_modified <- messy %>% tidyr::drop_na()
+messy_modified
+```
+```{r}
+tt(messy_modified)
+```
+

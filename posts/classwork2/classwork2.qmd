@@ -1,0 +1,80 @@
+---
+title: "classwork2"
+author: "nikhita"
+---
+
+## setup R packages
+
+```{r}
+#| label:setup
+#| echo:false
+library(tidyverse)
+library(mosaic)
+library(skimr) 
+library(visdat) 
+library(naniar)
+library(janitor)
+library(tinytable)
+```
+
+```{r}
+fastfood <- readr::read_csv("https://vincentarelbundock.github.io/Rdatasets/csv/openintro/fastfood.csv") %>% 
+  janitor::clean_names(case="snake")
+```
+
+```{r}
+base::names(fastfood)
+dplyr::glimpse(fastfood)
+base::dim(fastfood)
+utils::str(fastfood)
+```
+
+```{r}
+visdat::vis_dat(fastfood)
+```
+
+```{r}
+visdat::vis_miss(fastfood)
+```
+
+## removing missing data
+
+```{r}
+fastfood_modified <- fastfood %>% tidyr::drop_na()
+fastfood_modified
+```
+
+```{r}
+fastfood_modified2 <- fastfood %>% drop_na(calcium)
+fastfood_modified2
+```
+
+## removing 2 columns
+
+```{r}
+fastfood_modified3 <- fastfood %>% 
+  dplyr::select(-c(vit_a,vit_c))
+
+fastfood_modified3
+```
+
+```{r}
+fastfood_modified <- fastfood_modified %>% 
+  mutate(
+    restaurant = as.factor(restaurant),
+    salad = as.factor(salad),
+    item = as.factor(item)
+  )
+```
+
+```{r}
+
+```
+
+```{r}
+tt(fastfood_modified)
+```
+
+dplyr::relocate(where(is.factor), .after = rownames)
+
+glimpse(fastfood_modified)
