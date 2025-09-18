@@ -1,0 +1,8 @@
+---
+title: "scenery"
+author: "nikhita"
+date: "2025-09-18"
+categories: [news]
+---
+
+![This is a beautiful scenery.](images/clipboard-2168151520.png)
