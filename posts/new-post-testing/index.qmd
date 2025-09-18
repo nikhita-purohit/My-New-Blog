@@ -1,0 +1,10 @@
+---
+title: "new-post-testing"
+author: "nikhita"
+date: "2025-09-18"
+categories: [news]
+---
+
+This is the beach
+
+![](images/clipboard-3980959234.png)
