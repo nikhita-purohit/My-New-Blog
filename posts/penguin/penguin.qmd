@@ -35,3 +35,22 @@ messy_modified
 ```{r}
 tt(messy_modified)
 ```
+
+```{r}
+messy_modified <- messy_modified %>% 
+  mutate(across(where(is.character), ~na_if(., " ")))
+```
+
+```{r}
+messy_modified
+```
+
+```{r}
+messy_modified <- messy_modified %>%
+  drop_na()
+messy_modified
+```
+
+```{r}
+tt(messy_modified)
+```

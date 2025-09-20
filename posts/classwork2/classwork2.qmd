@@ -78,3 +78,16 @@ tt(fastfood_modified)
 dplyr::relocate(where(is.factor), .after = rownames)
 
 glimpse(fastfood_modified)
+
+```{r}
+fastfood_modified <- dplyr::relocate(fastfood_modified,where(is.factor), .after = "rownames")
+
+```
+
+```{r}
+glimpse(fastfood_modified)
+```
+
+```{r}
+tt(fastfood_modified)
+```
